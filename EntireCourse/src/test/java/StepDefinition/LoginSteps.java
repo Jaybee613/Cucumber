@@ -24,6 +24,7 @@ public class LoginSteps {
 	@When("^User enters username, password and Logs in$")
 	public void EnterLoginPage() throws Throwable {
 		System.out.println("Print When 1");
+	
 	}
 
 	@Then("^Home page is displayed$")
@@ -31,4 +32,6 @@ public class LoginSteps {
 		System.out.println("Print Then11");
 
 	}
+	
+	
 }
