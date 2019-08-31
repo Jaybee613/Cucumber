@@ -13,12 +13,12 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 public class LoginSteps {
 	
-	@Given("^User is on Login page$")
-	public void AccessLoginPage() throws Throwable {
+	@Given("^User is on Login page \"([^\"]*)\"$")
+	public void AccessLoginPage(String url) throws Throwable {
 		System.setProperty("webdriver.chrome.driver", "E:\\chromedriver_win32\\chromedriver.exe");
 		WebDriver FacebookPage = new ChromeDriver();
 		FacebookPage.manage().window().maximize();
-		FacebookPage.get("https://www.facebook.com");
+		FacebookPage.get(url);
 		System.out.println("Opened FB1");
 	}
 
