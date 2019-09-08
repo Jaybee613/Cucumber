@@ -6,6 +6,7 @@ import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import Cucumber.EntireCourse.GenericFunctions;
 import cucumber.api.DataTable;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
@@ -28,7 +29,8 @@ public class LoginSteps {
 
 	@When("^User enters username, password and Logs in$")
 	public void EnterLoginPage() throws Throwable {
-		System.out.println("Print When 1");
+		GenericFunctions GenericObject = new GenericFunctions();
+		GenericObject.InitiateDriver();
 	
 	}
 
