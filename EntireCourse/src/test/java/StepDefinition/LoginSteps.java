@@ -2,9 +2,12 @@ package StepDefinition;
 
 import java.util.List;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.logging.LogLevelMapping;
 
 import Cucumber.EntireCourse.GenericFunctions;
 import cucumber.api.DataTable;
@@ -17,14 +20,18 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 public class LoginSteps {
 	
+	//private static Logger log = new Logger(LoginSteps.class.getName());
+	
 	@Given("^User is on Login page \"([^\"]*)\"$")
 	public void AccessLoginPage(String url) throws Throwable {
+		
 		System.setProperty("webdriver.chrome.driver", "E:\\chromedriver_win32\\chromedriver.exe");
 		WebDriver FacebookPage = new ChromeDriver();
 		FacebookPage.manage().window().maximize();
 		FacebookPage.get(url);
 		System.out.println("Opened FB1");
 		FacebookPage.close();
+		
 	}
 
 	@When("^User enters username, password and Logs in$")
