@@ -2,6 +2,7 @@ package StepDefinition;
 
 import org.apache.log4j.Logger;
 
+
 public class Log4jTrial {
 
 	public static void main(String[] args) {
