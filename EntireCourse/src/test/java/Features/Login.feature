@@ -1,5 +1,5 @@
 Feature: Application_Login 
-
+@Test
 Scenario Outline: Validate Successful Login 
 	Given User is on Login page "<URL>" 
 	When User enters username, password and Logs in 
@@ -9,7 +9,7 @@ Scenario Outline: Validate Successful Login
 		|URL|
 		|http://www.facebook.com|
 		|http://www.gmail.com|
-		
+@Test	
 Scenario: Validate Page load 
 	Given User is on another login page 
 		|http://www.youtube.com|
