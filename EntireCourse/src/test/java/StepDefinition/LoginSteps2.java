@@ -2,10 +2,10 @@ package StepDefinition;
 
 import java.util.List;
 
-import Cucumber.EntireCourse.GlobalBrowser;
 import cucumber.api.DataTable;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
+import utilsPackage.GlobalBrowser;
 
 public class LoginSteps2 extends GlobalBrowser {
 
@@ -22,6 +22,6 @@ public class LoginSteps2 extends GlobalBrowser {
 	@Then("^Home page is ok$")
 	public void home_page_is_ok() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
-		getDriver().close();
+		CloseDriver();
 	}
 }

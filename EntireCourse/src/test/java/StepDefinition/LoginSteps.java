@@ -1,11 +1,12 @@
 package StepDefinition;
 
 import org.junit.runner.RunWith;
-import Cucumber.EntireCourse.GlobalBrowser;
+
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import cucumber.api.junit.Cucumber;
+import utilsPackage.GlobalBrowser;
 
 @RunWith(Cucumber.class)
 public class LoginSteps extends GlobalBrowser {
@@ -17,7 +18,6 @@ public class LoginSteps extends GlobalBrowser {
 		getDriver().get(url);
 		System.out.println("Opened FB1");
 		CloseDriver();
-
 	}
 
 	@When("^User enters username, password and Logs in$")
@@ -25,7 +25,6 @@ public class LoginSteps extends GlobalBrowser {
 		getDriver().get("http://www.amazon.in");
 		System.out.println("Print When");
 		CloseDriver();
-
 	}
 
 	@Then("^Home page is displayed$")
